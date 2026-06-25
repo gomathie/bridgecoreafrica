@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeCore Africa Group - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo-section {
+            margin-bottom: 40px;
+        }
+
+        .logo-placeholder {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: bold;
+            color: #1e3a5f;
+        }
+
+        .logo-text span {
+            color: #d4a84b;
+        }
+
+        h1 {
+            color: #d4a84b;
+            font-size: 42px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .coming-soon {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid #d4a84b;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .coming-soon h2 {
+            color: #d4a84b;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .services-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #d4a84b;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .service-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px auto;
+            max-width: 700px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .contact-section h2 {
+            color: #1e3a5f;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .contact-item strong {
+            color: #1e3a5f;
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .contact-item a {
+            color: #d4a84b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            font-size: 24px;
+        }
+
+        .founder-section {
+            color: #fff;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(212, 168, 75, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(212, 168, 75, 0.3);
+        }
+
+        .founder-section h3 {
+            color: #d4a84b;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .founder-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .founder-title {
+            font-size: 16px;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        .core-values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .value-tag {
+            background: #d4a84b;
+            color: #1e3a5f;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        footer {
+            color: #fff;
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .bridge-icon {
+            font-size: 60px;
+            margin: 20px 0;
+            color: #d4a84b;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+
+            .coming-soon h2 {
+                font-size: 28px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-item strong {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-placeholder">
+                <!-- Replace this with your actual logo image -->
+                <div class="logo-text">B<span>C</span></div>
+            </div>
+            <h1>BRIDGECORE AFRICA GROUP</h1>
+            <p class="tagline">"Bridging Investment, Execution, and Opportunity in Africa"</p>
+        </div>
+
+        <!-- Coming Soon Message -->
+        <div class="coming-soon">
+            <h2>Website Under Maintenance</h2>
+            <p class="message">
+                We're building something exceptional. BridgeCore Africa Group is your trusted partner 
+                for connecting global capital with high-potential opportunities in Africa's high-growth markets. 
+                Our comprehensive website is coming soon with detailed information about our services in 
+                investment facilitation, due diligence coordination, and project execution support.
+            </p>
+            
+            <div class="bridge-icon">🌉</div>
+        </div>
+
+        <!-- Services Preview -->
+        <div class="services-preview">
+            <div class="service-card">
+                <h3>💼 Investment Facilitation</h3>
+                <p>Opportunity identification, market entry support, investor introductions, and strategic partnership development.</p>
+            </div>
+            <div class="service-card">
+                <h3>📋 Due Diligence</h3>
+                <p>Preliminary project screening, documentation review, site visit coordination, and stakeholder engagement.</p>
+            </div>
+            <div class="service-card">
+                <h3>⚙️ Project Execution</h3>
+                <p>Local coordination, government liaison, partner sourcing, and operational support.</p>
+            </div>
+            <div class="service-card">
+                <h3>📈 Business Development</h3>
+                <p>Market intelligence, cross-border partnerships, supplier identification, and expansion strategy support.</p>
+            </div>
+        </div>
+
+        <!-- Focus Sectors -->
+        <div class="services-preview">
+            <div class="service-card">
+                <h3>⛏️ Mining</h3>
+                <p>Gold, Copper, Cobalt, and Critical Minerals - acquisition support and opportunity sourcing.</p>
+            </div>
+            <div class="service-card">
+                <h3>🌾 Agriculture</h3>
+                <p>Irrigation systems, agribusiness projects, agricultural technology, and value-chain development.</p>
+            </div>
+            <div class="service-card">
+                <h3>⚡ Energy</h3>
+                <p>Solar energy solutions, rural electrification, industrial energy projects, and infrastructure partnerships.</p>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="core-values">
+            <span class="value-tag">Integrity</span>
+            <span class="value-tag">Transparency</span>
+            <span class="value-tag">Professionalism</span>
+            <span class="value-tag">Strategic Partnerships</span>
+            <span class="value-tag">Sustainable Development</span>
+            <span class="value-tag">Excellence in Execution</span>
+        </div>
+
+        <!-- Founder Section -->
+        <div class="founder-section">
+            <h3>Led by Experienced Leadership</h3>
+            <div class="founder-name">Yves Nyundo</div>
+            <div class="founder-title">Founder & Managing Director</div>
+            <p style="margin-top: 15px; font-size: 14px; line-height: 1.6;">
+                Entrepreneur, investor facilitator, and Electrical & Automation Engineer with extensive experience 
+                in business development, project execution, and cross-border collaboration across Africa and China.
+            </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2>Get In Touch</h2>
+            <p style="margin-bottom: 25px; color: #666;">
+                Interested in learning more? Contact us directly while our website is under construction.
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">📧</span>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@bridgecoreafrica.com">info@bridgecoreafrica.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📱</span>
+                    <strong>Phone:</strong>
+                    <a href="https://wa.me/243890800001" target="_blank">+243 890 800 001</a>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <strong>Location:</strong>
+                    <span>Democratic Republic of the Congo</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🌍</span>
+                    <strong>Focus:</strong>
+                    <span>DRC • Republic of Congo • CAR • Kenya</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 BridgeCore Africa Group. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 12px;">Connecting Global Capital to African Opportunities</p>
+        </footer>
+    </div>
+</body>
+</html>
